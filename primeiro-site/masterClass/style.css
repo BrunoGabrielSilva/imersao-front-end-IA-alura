@@ -1,0 +1,73 @@
+/* Estilos para a Intranet FAQ - Time de TI - Infraestrutura */
+/* Usando paleta de cores do Sicoob: Azul (#003399), Azul Claro (#0066CC), Branco (#FFFFFF), Verde (#009900) */
+
+body {
+    background-color: #FFFFFF; /* Branco */
+    color: #000000; /* Preto para texto */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #003399; /* Azul Sicoob */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #009900; /* Verde Sicoob para variar */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #003399; /* Azul Sicoob */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Adicionar mais estilos se necessário */
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: #e8f5e8; /* Verde claro */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.content {
+    margin-left: 290px;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
