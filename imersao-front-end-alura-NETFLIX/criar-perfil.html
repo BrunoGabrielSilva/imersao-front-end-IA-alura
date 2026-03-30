@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Criar novo perfil - Netflix Clone">
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+    <title>Criar Novo Perfil - Netflix</title>
+    <link rel="stylesheet" href="style-criar-perfil.css">
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegação principal">
+            <a href="index.html" class="logo-link">
+                <img src="assets/netflix-logo.png" alt="Logotipo da Netflix" class="logo">
+            </a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="create-profile-container" aria-labelledby="create-heading">
+            <h1 id="create-heading">Adicionar Novo Perfil</h1>
+            <p class="subtitle">Customize seu novo perfil com nome e avatar</p>
+
+            <form id="profile-form" class="profile-form">
+                <fieldset class="form-group">
+                    <legend>Nome do Perfil</legend>
+                    <input 
+                        type="text" 
+                        id="profile-name" 
+                        name="profile-name" 
+                        placeholder="Digite o nome do perfil" 
+                        maxlength="20"
+                        required
+                        aria-label="Nome do novo perfil"
+                    >
+                    <span class="char-count"><span id="char-used">0</span>/20</span>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Escolha um Avatar</legend>
+                    <div class="avatar-selector" role="group" aria-label="Seleção de avatar">
+                        <label class="avatar-option">
+                            <input type="radio" name="avatar" value="assets/avatar-1.png" required aria-label="Avatar azul">
+                            <img src="assets/avatar-1.png" alt="Avatar azul">
+                            <span class="avatar-name">Azul</span>
+                        </label>
+                        <label class="avatar-option">
+                            <input type="radio" name="avatar" value="assets/avatar-2.png" aria-label="Avatar vermelho">
+                            <img src="assets/avatar-2.png" alt="Avatar vermelho">
+                            <span class="avatar-name">Vermelho</span>
+                        </label>
+                        <label class="avatar-option">
+                            <input type="radio" name="avatar" value="assets/avatar-3.png" aria-label="Avatar verde">
+                            <img src="assets/avatar-3.png" alt="Avatar verde">
+                            <span class="avatar-name">Verde</span>
+                        </label>
+                        <label class="avatar-option">
+                            <input type="radio" name="avatar" value="assets/avatar-4.png" aria-label="Avatar amarelo">
+                            <img src="assets/avatar-4.png" alt="Avatar amarelo">
+                            <span class="avatar-name">Amarelo</span>
+                        </label>
+                        <label class="avatar-option">
+                            <input type="radio" name="avatar" value="assets/profile-novo.png" aria-label="Avatar padrão">
+                            <img src="assets/profile-novo.png" alt="Avatar padrão">
+                            <span class="avatar-name">Padrão</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Criar Perfil</button>
+                    <a href="index.html" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+
+            <div id="preview" class="preview-section" hidden aria-live="polite">
+                <h2>Prévia do Perfil</h2>
+                <div class="preview-content">
+                    <img id="preview-avatar" src="" alt="" class="preview-avatar">
+                    <span id="preview-name" class="preview-name"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Netflix Clone para imersão Alura 03/2026. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script-criar-perfil.js"></script>
+</body>
+
+</html>

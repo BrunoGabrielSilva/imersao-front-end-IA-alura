@@ -1,24 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
+    <meta name="description" content="Página de seleção de perfis da Netflix Clone - Escolha quem está assistindo">
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+    <title>Quem está assistindo? - Netflix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <main>
-        <h1>Quem esta assistindo?</h1>
-        <div class="container">
-            <div class="profile">
-                <img src="/assets/profile-1.png" alt="Perfil 1">
-                <p>Narutinho</p>
-            </div>
-            <div class="profile">
-                <img src="/assets/profile-2.png" alt="Perfil 2">
-                <p>Sassaki</p>
-            </div>
 
-        </div>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegação principal">
+            <img src="assets/netflix-logo.png" alt="Logotipo da Netflix" class="logo">
+            <div class="theme-controls">
+                <span class="theme-label" id="theme-label">Tema</span>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-labelledby="theme-label" aria-describedby="theme-description"></button>
+                <span id="theme-description" class="sr-only">Botão para alternar entre tema claro e escuro</span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="profiles-section" aria-labelledby="profiles-heading">
+            <h1 id="profiles-heading">Quem está assistindo?</h1>
+
+            <ul class="profiles-grid" aria-label="Lista de perfis disponíveis para seleção">
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile" role="button" aria-labelledby="profile-narutinho" data-name="Narutinho" data-image="../assets/profile-1.png">
+                        <img src="assets/profile-1.png" alt="Avatar personalizado de Narutinho">
+                        <span id="profile-narutinho">Narutinho</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="catalogo/catalogo.html" class="profile" role="button" aria-labelledby="profile-sassaki" data-name="Sassaki" data-image="../assets/profile-2.png">
+                        <img src="assets/profile-2.png" alt="Avatar personalizado de Sassaki">
+                        <span id="profile-sassaki">Sassaki</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="criar-perfil.html" class="profile new-profile" role="button" aria-labelledby="profile-novo">
+                        <img src="assets/profile-novo.png" alt="Ícone de adicionar novo perfil">
+                        <span id="profile-novo">Novo Perfil</span>
+                    </a>
+                </li>
+            </ul>
+
+            <button type="button" class="manage-profiles-btn" aria-describedby="manage-desc">Gerenciar Perfis</button>
+            <span id="manage-desc" class="sr-only">Botão para editar ou adicionar perfis</span>
+        </section>
     </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Netflix Clone para imersão Alura 03/2026. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
